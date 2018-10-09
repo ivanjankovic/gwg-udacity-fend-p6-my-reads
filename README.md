@@ -1,5 +1,6 @@
 ### Project Specification Checklist
 
+---
 `Application Setup`
 - [x] created with create-react-app
 - [x] requires only npm install and npm start to get it installed and launched.
