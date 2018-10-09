@@ -1,4 +1,4 @@
-### PROJECT SPECIFICATION check list
+### Project Specification Checklist
 
 `Application Setup`
 - [x] created with create-react-app
@@ -7,14 +7,17 @@
 - [ ] README has instructions for installing and launching
 
 `Main Page`
-- [x] Mars
-- [ ] Jupiter
-- [ ] Saturn
+- [ ] main page shows 3 shelves for books
+- [ ] each book is shown on the correct shelf, along with its title and author(s).
+- [ ] main page shows a control that allows users to move books between shelves
+- [ ] control is tied to each book instance
+- [ ] moving a book to a different shelf works correctly
+- [ ] when the browser is refreshed, the same information is displayed on the page.
 
 `Search Page`
-- [ ] Uranus
-- [ ] Neptune
-- [ ] Comet Haley
+- [ ] '
+- [ ] '
+- [ ] '
 
 `Routing`
 - [ ] '
@@ -23,9 +26,10 @@
 
 `Code Functionality`
 
-- [ ] Uranus
-- [ ] Neptune
-- [ ] Comet Haley
+- [ ] '
+- [ ] '
+- [ ] '
+
 # MyReads Project
 
 Getting all your commits in your contributions graph
