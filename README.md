@@ -5,19 +5,23 @@
 - [x] requires only npm install and npm start to get it installed and launched.
 - [ ] README describes the project
 - [ ] README has instructions for installing and launching
+
 `Main Page`
 - [x] Mars
 - [ ] Jupiter
 - [ ] Saturn
+
 `Search Page`
 - [ ] Uranus
 - [ ] Neptune
 - [ ] Comet Haley
+
 `Routing`
 - [ ] 
 - [ ] 
 - [ ] 
 `Code Functionality`
+
 - [ ] Uranus
 - [ ] Neptune
 - [ ] Comet Haley
