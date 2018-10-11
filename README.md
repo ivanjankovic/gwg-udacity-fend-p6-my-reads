@@ -1,3 +1,9 @@
+## My Steps
+
+- [ ] refactor DOM book data from static, so that the data is pooled form state and
+- [ ] make each book as a component
+
+
 ## Project Specification Checklist
 
 `Application Setup`
@@ -7,8 +13,8 @@
 - [ ] README has instructions for installing and launching
 
 `Main Page`
-- [ ] main page shows 3 shelves for books
-- [ ] each book is shown on the correct shelf, along with its title and author(s).
+- [x] main page shows 3 shelves for books
+- [x] each book is shown on the correct shelf, along with its title and author(s).
 - [ ] main page shows a control that allows users to move books between shelves
 - [ ] control is tied to each book instance
 - [ ] moving a book to a different shelf works correctly
