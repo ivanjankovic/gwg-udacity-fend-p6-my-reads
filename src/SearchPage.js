@@ -33,7 +33,7 @@ class SearchPage extends Component {
                 </div>
                     <ol className="books-grid">
                         {/* call the Book component */}
-                        { !queryResult.error ? queryResult.map(book => <Book book={book} />) : null }
+                        { !queryResult || !queryResult.length ? null : queryResult.map(book => <Book book={book}/>) }
                     </ol>
                 </div>
             </div>
