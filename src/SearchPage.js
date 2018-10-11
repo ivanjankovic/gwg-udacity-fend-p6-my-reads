@@ -3,8 +3,15 @@ import Book from './Book'
 
 class SearchPage extends Component {
 
+    // componentDidMount(){
+    //     const state = this.props.state
+
+    //     BooksAPI.search(state.query).then(result => this.setState( {queryResult: result} )).catch(console.log(result))
+    //    
+    // }
+
     render() {
-        const searchResult = this.props.searchResult
+        const queryResult = this.props.state.queryResult
 
         return (
             <div className="search-books">
@@ -26,7 +33,7 @@ class SearchPage extends Component {
                 </div>
                     <ol className="books-grid">
                         {/* call the Book component */}
-                        {/* { searchResult.map(book => <Book book={book} />) } */}
+                        { !queryResult.error ? queryResult.map(book => <Book book={book} />) : null }
                     </ol>
                 </div>
             </div>

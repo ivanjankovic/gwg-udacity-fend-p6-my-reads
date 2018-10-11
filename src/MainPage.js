@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Book from './Book'
+import BookShelf from './BookShelf';
 
 class MainPage extends Component {
 
     render() {
-        const bookShelf = this.props.state.bookShelf
+        const state = this.props.state
         
         return (
             <div className="list-books">
@@ -13,33 +13,18 @@ class MainPage extends Component {
             </div>
             <div className="list-books-content">
             <div>
-                <div className="bookshelf">
-                <h2 className="bookshelf-title">Currently-Reading</h2>
-                <div className="bookshelf-books">
-                    <ol className="books-grid">
-                    {/* call the Book component */}
-                    { bookShelf.map(book => book.shelf === 'currentlyReading' ? <Book book={book} /> : null) }
-                    </ol>
-                </div>
-                </div>
-                <div className="bookshelf">
-                <h2 className="bookshelf-title">Want to Read</h2>
-                <div className="bookshelf-books">
-                    <ol className="books-grid">
-                    {/* call the Book component */}
-                    { bookShelf.map(book => book.shelf === 'wantToRead' ? <Book book={book} /> : null) }
-                    </ol>
-                </div>
-                </div>
-                <div className="bookshelf">
-                <h2 className="bookshelf-title">Read</h2>
-                <div className="bookshelf-books">
-                    <ol className="books-grid">
-                    {/* call the Book component */}
-                    { bookShelf.map(book => book.shelf === 'read' ? <Book book={book} /> : null) }
-                    </ol>
-                </div>
-                </div>
+                <BookShelf
+                    state={state}
+                    bsSetup={{bsHeader: 'Currently Reading', apiValue: 'currentlyReading'}}
+                />
+                <BookShelf
+                    state={state}
+                    bsSetup={{bsHeader: 'Want to Read', apiValue: 'wantToRead'}}
+                />
+                <BookShelf
+                    state={state}
+                    bsSetup={{bsHeader: 'Read', apiValue: 'read'}}
+                />
             </div>
             </div>
             <div className="open-search">

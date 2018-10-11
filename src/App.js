@@ -1,9 +1,10 @@
 import React from 'react'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
-import PlayGround from './playGround'
+
 import SearchPage from './SearchPage'
-import MainPage from './MainPage';
+import MainPage from './MainPage'
+
 
 class BooksApp extends React.Component {
   
@@ -14,14 +15,16 @@ class BooksApp extends React.Component {
      * users can use the browser's back and forward buttons to navigate between
      * pages, as well as provide a good URL they can bookmark and share.
      */
+    showSearchPage: false,
     bookShelf: [],
     query: '',
-    searchResult: {},
-    showSearchPage: false
+    queryResult: [],
+    queryTerms: ['Android', 'Art', 'Artificial Intelligence', 'Astronomy', 'Austen', 'Baseball', 'Basketball', 'Bhagat', 'Biography', 'Brief', 'Business', 'Camus', 'Cervantes', 'Christie', 'Classics', 'Comics', 'Cook', 'Cricket', 'Cycling', 'Desai', 'Design', 'Development', 'Digital Marketing', 'Drama', 'Drawing', 'Dumas', 'Education', 'Everything', 'Fantasy', 'Film', 'Finance', 'First', 'Fitness', 'Football', 'Future', 'Games', 'Gandhi', 'Homer', 'Horror', 'Hugo', 'Ibsen', 'Journey', 'Kafka', 'King', 'Lahiri', 'Larsson', 'Learn', 'Literary Fiction', 'Make', 'Manage', 'Marquez', 'Money', 'Mystery', 'Negotiate', 'Painting', 'Philosophy', 'Photography', 'Poetry', 'Production', 'Programming', 'React', 'Redux', 'River', 'Robotics', 'Rowling', 'Satire', 'Science Fiction', 'Shakespeare', 'Singh', 'Swimming', 'Tale', 'Thrun', 'Time', 'Tolstoy', 'Travel', 'Ultimate', 'Virtual Reality', 'Web Development', 'iOS']
   }
 
   updateQuery(query) {
     this.setState({query: query.trim()})
+    BooksAPI.search(query).then(result => this.setState( {queryResult: result} ))
   }
 
   handleChange(event) {
@@ -34,33 +37,11 @@ class BooksApp extends React.Component {
       alert('A name was submitted: ' + this.state.value);
       event.preventDefault();
   }
-  testAPIrequest() {
-    const emptyState = []
   
-    BooksAPI.search('Gandhi')
-      .then((querRsults) => {
-        querRsults.map(book => console.log(book.authors));
-        querRsults.map(book => emptyState.push({
-          title: book.title,
-          authors: book.authors,
-          thumbnail: book.imageLinks.thumbnail
-        }));
-      })
-    console.log(typeof emptyState)
-    console.log('BooksArray', emptyState);
-    this.setState({ searchResult: emptyState })
-  }
-  componentWillMount(){
-    // const fetchAndLog = async () => {
-    //   const response = await fetch('https://facebook.github.io/react-native/movies.json');
-    //   const json = await response.json();
-    //   // just log ‘json’
-    //   console.log(json);
-    // }
-    // fetchAndLog();
-    // this.setState({showSearchPage: true})
+  componentDidMount(){
+    // toogle page
+    this.setState({showSearchPage: true})
     BooksAPI.getAll().then(result => this.setState( {bookShelf: result} ))
-  
   }
   
   render() {
@@ -69,8 +50,7 @@ class BooksApp extends React.Component {
       <div className="app">
         {this.state.showSearchPage ? 
         <SearchPage
-          query={this.state.query}
-          searchResult={this.state.searchResult}
+          state={this.state}
           onChange={(event) => this.updateQuery(event.target.value)}
           onClick={() => this.setState({ showSearchPage: false })}
         /> :
