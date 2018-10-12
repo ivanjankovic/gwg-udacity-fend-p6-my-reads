@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import BookShelf from './BookShelf';
 
 class MainPage extends Component {
-
+    
     render() {
         const state = this.props.state
         
@@ -16,14 +16,17 @@ class MainPage extends Component {
                 <BookShelf
                     state={state}
                     bsSetup={{bsHeader: 'Currently Reading', apiValue: 'currentlyReading'}}
+                    onChange={this.props.onChange}
                 />
                 <BookShelf
                     state={state}
                     bsSetup={{bsHeader: 'Want to Read', apiValue: 'wantToRead'}}
+                    onChange={this.props.onChange}
                 />
                 <BookShelf
                     state={state}
                     bsSetup={{bsHeader: 'Read', apiValue: 'read'}}
+                    onChange={this.props.onChange}
                 />
             </div>
             </div>
