@@ -40,7 +40,7 @@ class BooksApp extends React.Component {
   
   componentDidMount(){
     // toogle page
-    this.setState({showSearchPage: true})
+    // this.setState({showSearchPage: true})
     BooksAPI.getAll().then(result => this.setState( {bookShelf: result} ))
   }
   
