@@ -27,17 +27,13 @@ class BooksApp extends React.Component {
     BooksAPI.search(query).then(result => this.setState( {queryResult: result} ))
   }
 
-  handleEvent= () => {
-    // this.setState({select: event.target.value});
-    console.log('Steva')
-    BooksAPI.getAll().then(result => this.setState( {bookShelf: result} )).then(console.log(this.bookShelf))
-  } 
-
-  updateBook= () => {
-    BooksAPI.getAll().then(result => this.setState( {bookShelf: result} ))
-    console.log('Steva')
-    // this.setState({value: event.target.value});
+  updateBook(book, shelf) {
+      BooksAPI.update(book, shelf).then(() => this.componentDidMount())
   }
+
+  handleEvent= () => {
+    BooksAPI.getAll().then(result => this.setState( {bookShelf: result} ))
+  } 
 
   handleSubmit(event) {
       alert('A name was submitted: ' + this.state.value);
@@ -59,11 +55,12 @@ class BooksApp extends React.Component {
           state={this.state}
           onChange={(event) => this.updateQuery(event.target.value)}
           onClick={() => this.setState({ showSearchPage: false })}
+          updateBook={this.updateBook.bind(this)}
         /> :
         <MainPage
           state={this.state}
           onClick={() => this.setState({ showSearchPage: true })}
-          onChange={this.componentDidMount()}
+          updateBook={this.updateBook.bind(this)}
         />
         }
       </div>

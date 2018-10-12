@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Book from './Book'
 
 class BookShelf extends Component {
-    componentDidMount() {}
     
     render() {
         const bookShelf = this.props.state.bookShelf
@@ -14,7 +13,8 @@ class BookShelf extends Component {
                 <div className="bookshelf-books">
                     <ol className="books-grid">
                     {/* call the Book component */}
-                    { bookShelf.map(book => book.shelf === bsSetup.apiValue ? <Book book={book} onChange={this.props.onChange} /> : null) }
+                    { bookShelf.map(book => book.shelf === bsSetup.apiValue ? 
+                        <Book book={book} updateBook={this.props.updateBook} /> : null) }
                     </ol>
                 </div>
             </div>
