@@ -23,26 +23,23 @@ class BooksApp extends React.Component {
   }
 
   updateQuery(query) {
-    this.setState({query: query.trim()})
-    BooksAPI.search(query).then(result => this.setState( {queryResult: result} ))
+    this.setState( {query: query.trim()} )
+    return query === '' ? null : BooksAPI.search(query).then(result => this.setState( {queryResult: result} ))
+      .then(this.isBookOnShelf(this.state.queryResult))
+  }
+  isBookOnShelf(result) {
+    result.map(bk => 
+      {this.state.bookShelf.map(sbk => sbk.id === bk.id ? bk.shelf = sbk.shelf : null), bk.shelf ? null : bk.shelf = 'none'} )
   }
 
   updateBook(book, shelf) {
-      BooksAPI.update(book, shelf).then(this.componentDidMount)
-  }
-
-  handleEvent= () => {
-    BooksAPI.getAll().then(result => this.setState( {bookShelf: result} ))
-  } 
-
-  handleSubmit(event) {
-      alert('A name was submitted: ' + this.state.value);
-      event.preventDefault();
+      BooksAPI.update(book, shelf)
+      this.componentDidMount()
   }
   
   componentDidMount(){
     // toogle page
-    this.setState({showSearchPage: true})
+    // this.setState({showSearchPage: true})
     BooksAPI.getAll().then(result => this.setState( {bookShelf: result} ))
   }
   

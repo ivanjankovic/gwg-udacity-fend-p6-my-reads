@@ -34,7 +34,7 @@ class SearchPage extends Component {
                     <ol className="books-grid">
                         {/* call the Book component */}
                         { !queryResult || !queryResult.length ? null
-                            : queryResult.map(book => <Book book={book} updateBook={this.props.updateBook} />) }
+                            : queryResult.map(book => <Book book={book} updateBook={this.props.updateBook} key={book.id}/>) }
                     </ol>
                 </div>
             </div>

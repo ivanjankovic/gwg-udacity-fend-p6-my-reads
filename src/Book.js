@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import * as BooksAPI from './BooksAPI'
 
 class Book extends Component {
 
     render() {
         const book = this.props.book
         const altImage = 'https://books.google.com/books/content?id=-RoevgAACAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
-
+        
         return (
             <li>
                 <div className="book">
@@ -19,7 +18,7 @@ class Book extends Component {
                     <div className="book-shelf-changer">
                         <select 
                             onChange={event => this.props.updateBook(book, event.target.value)}
-                            value={book.shelf ? book.shelf : 'none'}
+                            value={book.shelf}
                         >
                         <option value="move" disabled>Move to...</option>
                         <option value="currentlyReading">Currently Reading</option>

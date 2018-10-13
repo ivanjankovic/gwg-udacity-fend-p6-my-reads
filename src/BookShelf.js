@@ -14,7 +14,7 @@ class BookShelf extends Component {
                     <ol className="books-grid">
                     {/* call the Book component */}
                     { bookShelf.map(book => book.shelf === bsSetup.apiValue ? 
-                        <Book book={book} updateBook={this.props.updateBook} /> : null) }
+                        <Book book={book} updateBook={this.props.updateBook} key={book.id} /> : null) }
                     </ol>
                 </div>
             </div>
