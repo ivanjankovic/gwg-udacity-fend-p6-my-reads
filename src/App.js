@@ -29,7 +29,7 @@ class BooksApp extends React.Component {
   }
   isBookOnShelf(result) {
     result.map(bk => 
-      {this.state.bookShelf.map(sbk => sbk.id === bk.id ? bk.shelf = sbk.shelf : null), bk.shelf ? null : bk.shelf = 'none'} )
+      {this.state.bookShelf.map(sbk => sbk.id === bk.id ? bk.shelf = sbk.shelf : null); return bk.shelf ? null : bk.shelf = 'none'} )
   }
 
   updateBook(book, shelf) {

@@ -27,7 +27,7 @@
 - [x] invalid queries are handled and prior search results are not shown
 - [x] search works correctly when a book does not have a thumbnail or an author. (To test this, try searching for "poetry" and "biography")
 - [x] user is able to search for multiple words, such as “artificial intelligence.”
-- [ ] if a book is assigned to a shelf on the main page and that book appears on the search page, the correct shelf should be selected on the search page. If that book's shelf is changed on the search page, that change should be reflected on the main page as well. The option "None" should be selected if a book has not been assigned to a shelf
+- [x] if a book is assigned to a shelf on the main page and that book appears on the search page, the correct shelf should be selected on the search page. If that book's shelf is changed on the search page, that change should be reflected on the main page as well. The option "None" should be selected if a book has not been assigned to a shelf
 - [x] When an item is categorized on the search page and the user navigates to the main page, it appears on that shelf in the main page
 
 `Routing`
@@ -38,7 +38,7 @@
 
 - [x] Component state is passed down from parent components to child components.
 - [x] The state variable is not modified directly - setState() function is used correctly.
-- [ ] books have the same state on both the search page and the main application page: If a book is on a bookshelf, that is reflected in both locations.
+- [x] books have the same state on both the search page and the main application page: If a book is on a bookshelf, that is reflected in both locations.
 - [ ] The code runs without errors
 
 ## How To GitHub
