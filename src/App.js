@@ -28,7 +28,7 @@ class BooksApp extends React.Component {
   }
 
   updateBook(book, shelf) {
-      BooksAPI.update(book, shelf).then(() => this.componentDidMount())
+      BooksAPI.update(book, shelf).then(this.componentDidMount)
   }
 
   handleEvent= () => {
@@ -42,7 +42,7 @@ class BooksApp extends React.Component {
   
   componentDidMount(){
     // toogle page
-    // this.setState({showSearchPage: true})
+    this.setState({showSearchPage: true})
     BooksAPI.getAll().then(result => this.setState( {bookShelf: result} ))
   }
   
@@ -54,7 +54,7 @@ class BooksApp extends React.Component {
         <SearchPage
           state={this.state}
           onChange={(event) => this.updateQuery(event.target.value)}
-          onClick={() => this.setState({ showSearchPage: false })}
+          onClick={() => this.setState({ showSearchPage: false, queryResult: []})}
           updateBook={this.updateBook.bind(this)}
         /> :
         <MainPage

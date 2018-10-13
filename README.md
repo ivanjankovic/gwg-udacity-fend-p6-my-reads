@@ -24,8 +24,8 @@
 - [x] search page has a search input field
 - [x] as the user types into the search field, books that match the query are displayed on the page, along with their titles and author(s). You can use throttle/debounce but are not required to do so
 - [x] search results are not shown when all of the text is deleted out of the search input box
-- [ ] invalid queries are handled and prior search results are not shown
-- [ ] search works correctly when a book does not have a thumbnail or an author. (To test this, try searching for "poetry" and "biography")
+- [x] invalid queries are handled and prior search results are not shown
+- [x] search works correctly when a book does not have a thumbnail or an author. (To test this, try searching for "poetry" and "biography")
 - [x] user is able to search for multiple words, such as “artificial intelligence.”
 - [ ] if a book is assigned to a shelf on the main page and that book appears on the search page, the correct shelf should be selected on the search page. If that book's shelf is changed on the search page, that change should be reflected on the main page as well. The option "None" should be selected if a book has not been assigned to a shelf
 - [x] When an item is categorized on the search page and the user navigates to the main page, it appears on that shelf in the main page
