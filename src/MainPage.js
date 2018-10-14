@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import BookShelf from './BookShelf';
+import { Link } from 'react-router-dom'
 
 class MainPage extends Component {
     
@@ -31,9 +32,10 @@ class MainPage extends Component {
             </div>
             </div>
             <div className="open-search">
-            <a onClick={this.props.onClick}>Add a book</a>
+            <Link to='/search' onClick={this.props.onClick}>Add a book</Link>
             </div>
         </div>
+        
         )
     }
 }

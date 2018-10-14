@@ -39,7 +39,7 @@
 - [x] Component state is passed down from parent components to child components.
 - [x] The state variable is not modified directly - setState() function is used correctly.
 - [x] books have the same state on both the search page and the main application page: If a book is on a bookshelf, that is reflected in both locations.
-- [ ] The code runs without errors
+- [x] The code runs without errors
 
 ## How To GitHub
 
