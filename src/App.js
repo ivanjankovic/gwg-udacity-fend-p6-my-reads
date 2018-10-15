@@ -5,7 +5,7 @@ import './App.css'
 import SearchPage from './SearchPage'
 import MainPage from './MainPage'
 
-import { BrowserRouter, Route } from 'react-router-dom' 
+import { Route } from 'react-router-dom' 
 
 class BooksApp extends React.Component {
   
@@ -47,23 +47,21 @@ class BooksApp extends React.Component {
   render() {
     
     return (
-      <BrowserRouter>
-        <div className="app">
-          <Route exact path='/' component={() => <MainPage
-            state={this.state}
-            onClick={() => this.setState({ showSearchPage: true })}
-            updateBook={this.updateBook.bind(this)}
-            />}
-          />
-          <Route path='/search' render={() => <SearchPage
-            state={this.state}
-            onChange={(event) => this.updateQuery(event.target.value)}
-            onClick={() => this.setState({ showSearchPage: false, queryResult: []})}
-            updateBook={this.updateBook.bind(this)}
-            />}
-          />
-        </div>
-      </BrowserRouter>
+      <div className="app">
+        <Route exact path='/' component={() => <MainPage
+          state={this.state}
+          onClick={() => this.setState({ showSearchPage: true })}
+          updateBook={this.updateBook.bind(this)}
+          />}
+        />
+        <Route path='/search' render={() => <SearchPage
+          state={this.state}
+          onChange={(event) => this.updateQuery(event.target.value)}
+          onClick={() => this.setState({ showSearchPage: false, queryResult: []})}
+          updateBook={this.updateBook.bind(this)}
+          />}
+        />
+      </div>
     )
   }
 }
