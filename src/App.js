@@ -28,7 +28,7 @@ class BooksApp extends React.Component {
   // assign shelf property to books on search page
   assignShelfProperty(result) {
     // check if the API request is empty
-    result.error === 'empty query' ? null :
+    return result.error === 'empty query' ? null :
       result.map(bk => 
         {this.state.bookShelf.map(sbk => sbk.id === bk.id ? bk.shelf = sbk.shelf : null); return bk.shelf ? null : bk.shelf = 'none'} )
   }

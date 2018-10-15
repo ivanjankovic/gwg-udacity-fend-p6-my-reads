@@ -16,7 +16,7 @@ class Search404 extends Component {
                 <p>Serach results are limited to search terms listed below</p>
                 <div className='term-list'>
                     <ul>
-                        { this.state.queryTerms.map(term => <li>{term}</li>) }
+                        { this.state.queryTerms.map((term, i) => <li key={i}>{term}</li>) }
                     </ul>
                 </div>
             </div>
