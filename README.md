@@ -1,14 +1,20 @@
 ## My Reads Project
 
-Application is displaying 'bookshelf' with three 'shelves' of books - currently reading, want to read, and read. The user can add to the bookshelf by navigating to search page, searching the book library and adding any book to desired shelf. The user can also move them to beetwean shelves.
+Application is displaying 'bookshelf' with three 'shelves' of books - currently reading, want to read, and read. The user can add to the bookshelf by navigating to search page, searching the book library and adding any book to desired shelf. The user can also move them to betwean shelves.
 
 Only certain search terms work with this API. Please see those in the file SearchTerms.md (as originally provided by Udacity's API).
 
 Created with Create React App - (https://github.com/facebook/create-react-app/)
 
+## Hosted version
+
+Live version located at:
+
+https://ivanjanko.github.io/gwg-fend-project6-react-myreads/#/
+
 ## How to start
 
-To run the project localy:
+To run the project locally:
 
 ```
 git clone https://github.com/ivanjanko/gwg-fend-project6-react-myreads
