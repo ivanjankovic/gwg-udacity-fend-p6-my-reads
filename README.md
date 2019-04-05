@@ -10,14 +10,14 @@ Created with Create React App - (https://github.com/facebook/create-react-app/)
 
 Live version located at:
 
-https://ivanjanko.github.io/gwg-fend-project6-react-myreads/#/
+https://ivanjankovic.github.io/gwg-fend-project6-react-myreads/#/
 
 ## How to start
 
 To run the project locally:
 
 ```
-git clone https://github.com/ivanjanko/gwg-fend-project6-react-myreads
+git clone https://github.com/ivanjankovic/gwg-fend-project6-react-myreads
 cd gwg-fend-project6-react-myreads
 ```
 ```
