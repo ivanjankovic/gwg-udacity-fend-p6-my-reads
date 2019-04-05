@@ -8,15 +8,15 @@ Only certain search terms work with this API. Please see those in the file Searc
 
 Live version located at:
 
-https://ivanjankovic.github.io/gwg-fend-project6-react-myreads/#/
+https://ivanjankovic.github.io/gwg-udacity-fend-p6-my-reads/#/
 
 ## How to start
 
 To run the project locally:
 
 ```
-git clone https://github.com/ivanjankovic/gwg-fend-project6-react-myreads
-cd gwg-fend-project6-react-myreads
+git clone https://github.com/ivanjankovic/gwg-udacity-fend-p6-my-reads
+cd gwg-udacity-fend-p6-my-reads
 ```
 ```
 npm install

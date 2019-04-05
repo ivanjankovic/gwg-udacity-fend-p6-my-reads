@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ivanjankovic.github.io/gwg-fend-project6-react-myreads",
+  "homepage": "https://ivanjankovic.github.io/gwg-udacity-fend-p6-my-reads",
   "dependencies": {
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
