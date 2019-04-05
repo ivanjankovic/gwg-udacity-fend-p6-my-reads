@@ -4,8 +4,6 @@ Application is displaying 'bookshelf' with three 'shelves' of books - currently 
 
 Only certain search terms work with this API. Please see those in the file SearchTerms.md (as originally provided by Udacity's API).
 
-Created with Create React App - (https://github.com/facebook/create-react-app/)
-
 ## Hosted version
 
 Live version located at:
