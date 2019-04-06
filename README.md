@@ -4,9 +4,7 @@ Application is displaying 'bookshelf' with three 'shelves' of books - currently 
 
 Only certain search terms work with this API. Please see those in the file SearchTerms.md (as originally provided by Udacity's API).
 
-## Hosted version
-
-Live version located at:
+### Live version located at:
 
 https://ivanjankovic.github.io/gwg-udacity-fend-p6-my-reads/#/
 
