@@ -1,4 +1,4 @@
-## My Reads Project
+## P6 My Reads
 
 Application is displaying 'bookshelf' with three 'shelves' of books - currently reading, want to read, and read. The user can add to the bookshelf by navigating to search page, searching the book library and adding any book to desired shelf. The user can also move them to betwean shelves.
 
